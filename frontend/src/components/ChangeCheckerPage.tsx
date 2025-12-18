@@ -4,8 +4,6 @@ import RefreshIcon from '@mui/icons-material/Refresh'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import { useStore } from '../state/StoreContext'
-import BackgroundImage from './BackgroundImage'
-import backgroundImage from '../assets/image.png'
 import NumberField from './NumberField'
 
 export default function ChangeCheckerPage() {
@@ -182,7 +180,6 @@ export default function ChangeCheckerPage() {
         </CardContent>
 
       </Paper>
-      <BackgroundImage image={backgroundImage} />
     </Box>
   )
 }

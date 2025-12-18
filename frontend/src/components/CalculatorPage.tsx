@@ -7,8 +7,7 @@ import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import RemoveCircleOutlineOutlinedIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import { sum } from '../util/conversions'
-import BackgroundImage from './BackgroundImage';
-import backgroundImage from '../assets/image2.png'
+
 import NumberField from './NumberField'
 
 
@@ -183,7 +182,6 @@ export default function CalculatorPage() {
         </CardContent>
 
       </Paper>
-      <BackgroundImage image={backgroundImage} />
     </Box>
   )
 }

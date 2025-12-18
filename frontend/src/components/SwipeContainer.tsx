@@ -6,6 +6,8 @@ import { BottomNavigation, BottomNavigationAction, Paper } from '@mui/material'
 import SettingsIcon from '@mui/icons-material/Settings'
 import CalculateIcon from '@mui/icons-material/Calculate'
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange'
+import BackgroundImage from './BackgroundImage';
+import backgroundImage from '../assets/image2.png'
 
 const pages = [
   { component: <SettingsPage />, label: 'Settings', icon: <SettingsIcon /> },
@@ -72,6 +74,7 @@ export default function SwipeContainer() {
           ))}
         </BottomNavigation>
       </Paper>
+      <BackgroundImage image={backgroundImage} />
     </div>
   )
 }

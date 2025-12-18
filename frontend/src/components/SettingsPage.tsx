@@ -2,8 +2,6 @@ import { Box, Typography, Paper, CardContent, IconButton } from '@mui/material'
 import RefreshIcon from '@mui/icons-material/Refresh'
 import { useStore } from '../state/StoreContext'
 import { defaultSettings } from '../state/store'
-import BackgroundImage from './BackgroundImage';
-import backgroundImage from '../assets/image3.png'
 import NumberField from './NumberField'
 
 
@@ -59,8 +57,6 @@ export default function SettingsPage() {
           />
         </CardContent>
       </Paper>
-
-      < BackgroundImage image={backgroundImage} />
     </Box>
   )
 }
