@@ -20,7 +20,7 @@ export default function SettingsPage() {
   }
 
   return (
-    <Box sx={{ position: 'relative', p: 2, height: '100%', overflowY: 'auto' }}>
+    <Box sx={{ position: 'relative', p: 2, height: '100%', overflowY: 'auto', pb: 10 }}>
       <Paper sx={{ p: 2, opacity: 0.9 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', gap: 0 }}>
           <Typography variant="h4">Settings</Typography>

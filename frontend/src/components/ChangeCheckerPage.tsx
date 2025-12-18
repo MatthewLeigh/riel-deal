@@ -59,7 +59,7 @@ export default function ChangeCheckerPage() {
   const handleDecrement = () => setOffset(prev => Math.max(prev - 1, 0))
 
   return (
-    <Box sx={{ position: 'relative', p: 2, height: '100%', overflowY: 'auto' }}>
+    <Box sx={{ position: 'relative', p: 2, height: '100%', overflowY: 'auto', pb: 10 }}>
       <Paper sx={{ p: 2, opacity: 0.9 }}>
 
         <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', gap: 0 }}>

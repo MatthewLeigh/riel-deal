@@ -48,7 +48,7 @@ export default function CalculatorPage() {
   }, [khrTally, usdTally, settings])
 
   return (
-    <Box sx={{ position: 'relative', p: 2, height: '100%', overflowY: 'auto', overflowX: 'hidden' }}>
+    <Box sx={{ position: 'relative', p: 2, height: '100%', overflowY: 'auto', overflowX: 'hidden', pb: 10 }}>
       <Paper sx={{ p: 2, opacity: 0.9 }}>
 
         <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', gap: 0 }}>

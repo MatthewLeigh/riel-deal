@@ -29,7 +29,7 @@ export default function SwipeContainer() {
   }
 
   return (
-    <div 
+    <div
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -38,14 +38,19 @@ export default function SwipeContainer() {
         margin: 'auto',
         overflow: 'hidden'
       }}
-      onTouchStart={onTouchStart} 
+      onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
-      <div style={{ flex: 1, overflow: 'hidden' }}>
+      <div
+        style={{
+          flex: 1,
+          minHeight: 0, 
+          overflowY: 'auto',
+        }}
+      >
         <div style={{
           display: 'flex',
           height: '100%',
-          transition: 'transform 0.3s',
           transform: `translateX(-${index * 100}%)`,
         }}>
           {pages.map((p, i) => (
