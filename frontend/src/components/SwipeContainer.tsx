@@ -21,12 +21,17 @@ export default function SwipeContainer() {
 
   const onTouchStart = (e: React.TouchEvent) => (startX.current = e.touches[0].clientX)
   const onTouchEnd = (e: React.TouchEvent) => {
-    if (startX.current === null) return
-    const delta = e.changedTouches[0].clientX - startX.current
-    if (delta > 60 && index > 0) setIndex(index - 1)
-    if (delta < -60 && index < pages.length - 1) setIndex(index + 1)
-    startX.current = null
+  if (startX.current === null) return
+  const delta = e.changedTouches[0].clientX - startX.current
+  if (Math.abs(delta) > 60) {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur()
+    }
   }
+  if (delta > 60 && index > 0) setIndex(index - 1)
+  if (delta < -60 && index < pages.length - 1) setIndex(index + 1)
+  startX.current = null
+}
 
   return (
     <div
