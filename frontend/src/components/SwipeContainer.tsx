@@ -34,27 +34,26 @@ export default function SwipeContainer() {
         display: 'flex',
         flexDirection: 'column',
         height: '100dvh',
-        maxWidth: '768px',
+        maxWidth: 768,
         margin: 'auto',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        touchAction: 'pan-y',
+        position: 'relative',
       }}
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
-      <div
-        style={{
-          flex: 1,
-          minHeight: 0, 
-          overflowY: 'auto',
-        }}
-      >
+      <BackgroundImage image={backgroundImage} />
+
+      <div style={{ flex: 1, overflow: 'hidden' }}>
         <div style={{
           display: 'flex',
           height: '100%',
           transform: `translateX(-${index * 100}%)`,
+          transition: 'transform 0.3s ease',
         }}>
           {pages.map((p, i) => (
-            <div key={i} style={{ minWidth: '100%', height: '100%', overflowY: 'auto', overflowX: 'hidden' }}>
+            <div key={i} style={{ minWidth: '100%', height: '100%', overflowY: 'auto' }}>
               {p.component}
             </div>
           ))}
@@ -70,7 +69,7 @@ export default function SwipeContainer() {
           right: 0,
           zIndex: 1300,
           width: '100%',
-          paddingBottom: 'env(safe-area-inset-bottom)'
+          paddingBottom: 'env(safe-area-inset-bottom)',
         }}
       >
         <BottomNavigation value={index} onChange={(_, newVal) => setIndex(newVal)}>
@@ -79,7 +78,7 @@ export default function SwipeContainer() {
           ))}
         </BottomNavigation>
       </Paper>
-      <BackgroundImage image={backgroundImage} />
     </div>
+
   )
 }
