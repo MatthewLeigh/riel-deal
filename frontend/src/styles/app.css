@@ -1,0 +1,81 @@
+.app {
+    height: 100vh;
+    background: #111;
+    color: #fff;
+    font-family: system-ui, sans-serif;
+    overflow: hidden;
+}
+
+.swipe-container {
+    height: 100%;
+    width: 100%;
+}
+
+.swipe-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.25s ease;
+}
+
+.page {
+    width: 100vw;
+    flex-shrink: 0;
+}
+
+.page-content {
+    padding: 16px;
+}
+
+.page-dots {
+    position: fixed;
+    bottom: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #555;
+    border: none;
+}
+
+.dot.active {
+    background: #fff;
+}
+
+.page-content input {
+    width: 80px;
+    padding: 6px 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background: #222;
+    color: #fff;
+}
+
+.page-content label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.swipe-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 56;
+    border-top: 1px solid #eee;
+    background: #fff
+}
