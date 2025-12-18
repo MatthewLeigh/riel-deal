@@ -9,7 +9,7 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({ image }) => {
   return (
     <Box
       sx={{
-        position: 'absolute',
+        position: 'fixed',
         inset: 0,
         opacity: 0.4,
         zIndex: -1,
