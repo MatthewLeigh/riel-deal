@@ -13,14 +13,21 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({ image }) => {
         inset: 0,
         opacity: 0.4,
         zIndex: -1,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        width: '100vw',
+        minHeight: '100dvh',
       }}
     >
       <Box
         component="img"
         src={image}
         alt=""
-        sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        sx={{
+          width: '100%',
+          height: '100%',
+          minHeight: '100dvh',
+          objectFit: 'cover',
+        }}
       />
     </Box>
   )
