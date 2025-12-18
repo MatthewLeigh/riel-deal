@@ -29,7 +29,14 @@ export default function SwipeContainer() {
 
   return (
     <div 
-      style={{ display: 'flex', flexDirection: 'column', height: '100vh', maxWidth: '768px', margin: 'auto' }} 
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100vh',
+        maxWidth: '768px',
+        margin: 'auto',
+        overflow: 'hidden'
+      }}
       onTouchStart={onTouchStart} 
       onTouchEnd={onTouchEnd}
     >
@@ -48,15 +55,16 @@ export default function SwipeContainer() {
         </div>
       </div>
 
-      {/* Bottom Navigation */}
       <Paper
         elevation={3}
         sx={{
-          position: 'absolute',
+          position: 'sticky',
           bottom: 0,
           left: 0,
           right: 0,
-          zIndex: 1300
+          zIndex: 1300,
+          width: '100%',
+          paddingBottom: 'env(safe-area-inset-bottom)'
         }}
       >
         <BottomNavigation value={index} onChange={(_, newVal) => setIndex(newVal)}>
