@@ -17,7 +17,6 @@ export default function SwipeContainer() {
   const [index, setIndex] = useState(1)
   const startX = useRef<number | null>(null)
 
-  // Swipe handlers
   const onTouchStart = (e: React.TouchEvent) => (startX.current = e.touches[0].clientX)
   const onTouchEnd = (e: React.TouchEvent) => {
     if (startX.current === null) return
@@ -32,7 +31,7 @@ export default function SwipeContainer() {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        height: '100vh',
+        height: '100dvh',
         maxWidth: '768px',
         margin: 'auto',
         overflow: 'hidden'
@@ -58,7 +57,7 @@ export default function SwipeContainer() {
       <Paper
         elevation={3}
         sx={{
-          position: 'sticky',
+          position: 'fixed',
           bottom: 0,
           left: 0,
           right: 0,
